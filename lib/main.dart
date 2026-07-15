@@ -1,25 +1,30 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
-
+import 'routes/app_pages.dart';
+import 'bindings/splash_binding.dart';
 
 void main() {
-  runApp(const ProductList());
+  runApp(const MyApp());
 }
 
-class ProductList extends StatelessWidget {
-  const ProductList({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Product List',
+    return GetMaterialApp(
+      title: 'Recipe List',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
+      // inital route is the splash screen
+      initialRoute: AppPages.initial,
+      // activates the splash controller
+      initialBinding: SplashBinding(),
+      // defines the routes available in the app
+      getPages: AppPages.routes,
 
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+
       // Set the start screen to the Splash Screen
-      home:  SplashScreen(),
     );
   }
 }
