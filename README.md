@@ -1,17 +1,15 @@
-# my_first_app_
+## How to Run the App
 
-A new Flutter project.
+You must have the Flutter SDK installed in your PC, then run the following commands in your terminal:
 
-## Getting Started
+# Install dependencies:
+flutter pub get.
 
-This project is a starting point for a Flutter application.
+# Now run the application on your connected device or emulator using:
+flutter run
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Explain your UI design choice in 3 lines:
+1. I used elevated cards with shadows and rounded borders to model each recipe with their unique information.
+2. I also used a consitent branding color of orange (Color(0xFFCC5500)) to style the app and this is to uphold user's intrest in using the app
+3. Finally i used three onboarding slide to communicate value and also sell trust to the target user while he/she is using the application.
