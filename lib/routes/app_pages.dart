@@ -1,6 +1,10 @@
 import 'package:get/get.dart';
 import 'package:my_first_app/bindings/onboarding_binding.dart';
 import 'package:my_first_app/bindings/splash_binding.dart';
+import 'package:my_first_app/views/edit_profile2_view.dart';
+import 'package:my_first_app/bindings/edit_profile2_binding.dart';
+import 'package:my_first_app/views/profile2_views.dart';
+import 'package:my_first_app/bindings/profile2_binding.dart';
 
 import 'package:my_first_app/views/onboarding_view.dart';
 import 'package:my_first_app/views/splash_screen.dart';
@@ -49,6 +53,17 @@ class AppPages {
       name: AppRoutes.home,
       page: () => const HomeView(),
       binding: HomeBinding(),
+    ),
+    //prfile2 screen
+    GetPage(
+      name: AppRoutes.profile2,
+      page: () => const Profile2View(),
+      binding: Profile2Binding(),
+    ),
+    GetPage(
+      name: AppRoutes.editProfile2,
+      page: () => const EditProfile2View(),
+      binding: EditProfile2Binding(),
     ),
   ];
 }

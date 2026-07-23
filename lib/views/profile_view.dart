@@ -7,6 +7,9 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Brand Orange Constant
+    const brandOrange = Color(0xFFCC5500);
+
     // Dynamically retrieve the AuthController holding our logged-in user's inputs!
     final AuthController authController = Get.find<AuthController>();
 
@@ -16,21 +19,21 @@ class ProfileView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        shadowColor: Color(0xFFCC5500),
-
+        shadowColor: brandOrange,
         backgroundColor: Colors.white,
         elevation: 3,
         title: const Text(
           'Profile',
           style: TextStyle(
-            color: Color(0xFFCC5500),
+            color: brandOrange,
             fontWeight: FontWeight.bold,
           ),
         ),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.more_horiz, color: Colors.black),
+            // ◄── COLOR UPDATED: App Bar Action Icon
+            icon: const Icon(Icons.more_horiz, color: brandOrange),
             onPressed: () {},
           ),
         ],
@@ -66,13 +69,12 @@ class ProfileView extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // usig obsevable to update ui
+              // using observable to update ui
               Obx(
                 () => Text(
                   isFromLogin
                       ? "Hello, ${authController.userName.value}"
                       : "Welcome, ${authController.userName.value}",
-                  // isFromLogin ? "Hello, $userName" : "Welcome, $userName",
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -95,11 +97,12 @@ class ProfileView extends StatelessWidget {
               const Text(
                 'More...',
                 style: TextStyle(
-                  color: Color(0xFFCC5500),
+                  color: brandOrange,
                   fontWeight: FontWeight.w500,
                 ),
               ),
               const SizedBox(height: 24),
+              
               // Horizontal Category Switcher
               Row(
                 children: [
@@ -107,7 +110,7 @@ class ProfileView extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFCC5500), // Emerald Green
+                        color: brandOrange,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Center(
@@ -240,6 +243,8 @@ class ProfileView extends StatelessWidget {
     String duration,
     String imageUrl,
   ) {
+    const brandOrange = Color(0xFFCC5500);
+
     return Container(
       height: 200,
       width: double.infinity,
@@ -271,7 +276,8 @@ class ProfileView extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.star, color: Colors.amber, size: 14),
+                  // ◄── COLOR UPDATED: Rating Star Icon
+                  const Icon(Icons.star, color: brandOrange, size: 14),
                   const SizedBox(width: 4),
                   Text(
                     rating,
@@ -309,16 +315,17 @@ class ProfileView extends StatelessWidget {
                       const SizedBox(height: 4),
                       Text(
                         'By $author',
-                        style: TextStyle(color: Colors.white, fontSize: 12),
+                        style: const TextStyle(color: Colors.white, fontSize: 12),
                       ),
                     ],
                   ),
                 ),
                 Row(
                   children: [
+                    // ◄── COLOR UPDATED: Time Duration Icon
                     const Icon(
                       Icons.access_time,
-                      color: Colors.white,
+                      color: brandOrange,
                       size: 16,
                     ),
                     const SizedBox(width: 4),
@@ -327,12 +334,14 @@ class ProfileView extends StatelessWidget {
                       style: const TextStyle(color: Colors.white, fontSize: 12),
                     ),
                     const SizedBox(width: 12),
+                    
+                    // ◄── COLOR UPDATED: Bookmark Circle & Icon
                     CircleAvatar(
                       radius: 16,
-                      backgroundColor: const Color.fromARGB(255, 51, 51, 51),
+                      backgroundColor: Colors.white,
                       child: const Icon(
                         Icons.bookmark_border,
-                        color: Colors.white,
+                        color: brandOrange,
                         size: 18,
                       ),
                     ),

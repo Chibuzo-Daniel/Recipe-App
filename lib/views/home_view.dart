@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_first_app/views/profile_view.dart';
+import 'package:my_first_app/views/profile2_views.dart';
+//import 'package:my_first_app/views/profile_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -221,7 +222,7 @@ class HomeView extends GetView<HomeController> {
           children: [
             _buildRecipeListTab(),
             _buildPlaceholderTab(Icons.shopping_cart, 'Cart'),
-            const ProfileView(),
+            Profile2View(),
             _buildPlaceholderTab(Icons.notifications, 'Notifications'),
             _buildPlaceholderTab(Icons.settings, 'Settings'),
           ],

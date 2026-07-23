@@ -2,8 +2,11 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'routes/app_pages.dart';
 import 'bindings/splash_binding.dart';
+import 'storage/service_storage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Get.putAsync(() => ServiceStorage().init());
   runApp(const MyApp());
 }
 
